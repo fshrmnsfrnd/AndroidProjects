@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RindenAbzugsRechner</string>
+        <string-array name="imgTypes">
+            <item>Bild1</item>
+            <item>Bild2</item>
+        </string-array>
+</resources>
