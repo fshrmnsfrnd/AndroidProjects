@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -25,19 +26,14 @@ import de.ts.rindenrechenerfullsa.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     private ActivityMainBinding binding;
-    private View view;
     ImageView imgBaumArt;
     String selected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Bindng
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        //Bindng
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-        view = binding.getRoot();
-        setContentView(view);
 
         //Spinner füllen
         Spinner baumartSpinner = binding.spinnerBaumart;
@@ -62,12 +58,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         int resId = getResources().getIdentifier(selected.toLowerCase().split(" ")[0], "drawable", getPackageName());
         imgBaumArt.setImageResource(resId);
-        //Bild updaten
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-
+        //empty
     }
 
     public void calc(View view){
@@ -75,12 +70,36 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             double dM = Double.valueOf(binding.textDM.getText().toString());
             double percent = RindenRechner.getRindenanteil(selected, dM);
             double staerke = RindenRechner.getRindenstaerke(selected, dM);
-            binding.textPercent.setText(String.valueOf(percent));
+
             binding.textSize.setText(String.valueOf(staerke));
 
+            Snackbar snicker = Snackbar.make(view, "Percent:" + percent + "%", Snackbar.LENGTH_INDEFINITE);
+            snicker.addCallback(
+                new Snackbar.Callback(){
+                    @Override
+                    public void onShown(Snackbar sb){
+                        binding.textPercent.setText(String.valueOf(percent));
+                    }
+
+                    @Override
+                    public void onDismissed(Snackbar sb, int event){
+                        binding.textPercent.setText(String.valueOf(0));
+                        Log.d("myTag", "Dismissed");
+                    }
+                }
+            );
+
+            snicker.setAction("Rückgängig", v -> {
+                binding.textDM.setText(String.valueOf(0));
+                Log.d("myTag", "Back");
+            });
+            snicker.setAction("Weiter", v -> {
+                binding.textDM.setText(String.valueOf(0));
+                Log.d("myTag", "weiter");
+            });
+            snicker.show();
         } catch (Exception e) {
             Toast.makeText(getApplicationContext(), "Check your inputs", Toast.LENGTH_SHORT).show();
-            Log.d("myTag", e.getMessage());
         }
     }
 }
