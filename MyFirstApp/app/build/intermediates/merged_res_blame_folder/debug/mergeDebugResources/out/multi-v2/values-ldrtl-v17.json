@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "de.btin2.myfirstapp-mergeDebugResources-2:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "map": [
+                {
+                    "source": "D:\\VMs\\n.natzer\\android_portable\\android\\AndroidRes\\.gradle\\caches\\8.13\\transforms\\8265e1c5b66dbdf1dddbcfc5d4b97f19\\transformed\\material-1.12.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,191",
+                        "endColumns": "135,140",
+                        "endOffsets": "186,327"
+                    }
+                }
+            ]
+        }
+    ]
+}
