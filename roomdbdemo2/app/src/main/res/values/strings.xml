@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">roomdbdemo2</string>
+    <string name="ArticleName">Article Name</string>
+    <string name="ArticleQuantity">Article Quantity</string>
+    <string name="ArticleNew">Article New</string>
+    <string name="ArticleFind">Article Find</string>
+    <string name="ArticleDelete">Article Delete</string>
+    <string name="ArticleListHeader">Article List Header</string>
+</resources>
