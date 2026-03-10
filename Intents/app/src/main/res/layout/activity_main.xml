@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/lblStep1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Starten einer anderen Aktivität"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnStep1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startStep1"
+        android:text="Start" />
+
+    <TextView
+        android:id="@+id/lblStep2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Starten mit Datenübergabe"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Geben Sie bitte einen Text ein..."
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnStep2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startDetailActivity"
+        android:text="Start" />
+
+    <TextView
+        android:id="@+id/lblStep3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. Alarm anlegen"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnStep3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="createAlarm"
+        android:text="Start" />
+
+    <TextView
+        android:id="@+id/lblStep4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4. Rufnummer wählen"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnStep4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="dialPhoneNumber"
+        android:text="Start" />
+
+    <TextView
+        android:id="@+id/lblStep5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5. Schnappschuss"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnStep5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="capturePhoto"
+        android:text="Start" />
+
+    <TextView
+        android:id="@+id/lblStep6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="6. Position anzeigen"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnStep6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="startMapActivity"
+        android:text="Start" />
+
+    <TextView
+        android:id="@+id/lblStep7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="7. URL anzeigen"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnStep7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showUrl"
+        android:text="Start" />
+
+</LinearLayout>
