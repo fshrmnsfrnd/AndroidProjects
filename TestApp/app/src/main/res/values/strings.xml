@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string-array name="trees">
+        <item>Ahorn</item>
+        ...
+        <item>Zeder</item>
+    </string-array>
+</resources>
