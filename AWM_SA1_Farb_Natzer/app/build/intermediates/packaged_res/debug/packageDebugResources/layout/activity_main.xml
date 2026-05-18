@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/constraintLayout"
+        app:layout_anchorGravity="center"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/txtGesamtFlaeche"
+            android:layout_width="163dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="76dp"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/txtGesamtFlaecheHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="72dp"
+            android:text="Gesamtfläche in m2:"
+            android:textAlignment="viewEnd"
+            android:textColor="#3F51B5"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/editLaenge"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editRaumname" />
+
+        <EditText
+            android:id="@+id/editBreite"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editLaenge" />
+
+        <EditText
+            android:id="@+id/editRaumname"
+            android:layout_width="248dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="12dp"
+            android:textAlignment="viewStart"
+            android:textColor="#3F51B5"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtRaumNameHeader" />
+
+        <TextView
+            android:id="@+id/txtLaengeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="30dp"
+            android:text="Länge in m:"
+            android:textAlignment="viewEnd"
+            android:textColor="#3F51B5"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editRaumname" />
+
+        <TextView
+            android:id="@+id/txtHoeheHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="30dp"
+            android:text="Höhe in m:"
+            android:textAlignment="viewEnd"
+            android:textColor="#3F51B5"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtBreiteHeader2" />
+
+        <TextView
+            android:id="@+id/txtBreiteHeader2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="30dp"
+            android:text="Breite in m:"
+            android:textAlignment="viewEnd"
+            android:textColor="#3F51B5"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLaengeHeader" />
+
+
+        <EditText
+            android:id="@+id/editHoehe"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:text="0.0"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editBreite" />
+
+        <TextView
+            android:id="@+id/tvBerechnungHeader"
+            android:layout_width="103dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="28dp"
+            android:text="Berechnung: "
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSpeichern" />
+
+        <ImageButton
+            android:id="@+id/imgBtnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="48dp"
+            android:onClick="naechsterRaum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtRaumNameHeader"
+            app:srcCompat="@android:drawable/ic_media_ff" />
+
+        <Button
+            android:id="@+id/btnSpeichern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:onClick="speichernRaum"
+            android:text="SPEICHERN"
+            app:layout_constraintEnd_toStartOf="@+id/btnReset"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNeu"
+            app:layout_constraintTop_toBottomOf="@+id/editHoehe" />
+
+        <Button
+            android:id="@+id/btnNeu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:onClick="neuerRaum"
+            android:text="NEU"
+            app:layout_constraintEnd_toStartOf="@+id/btnSpeichern"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtHoeheHeader" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:onClick="resetRaum"
+            android:text="RESET"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnSpeichern"
+            app:layout_constraintTop_toBottomOf="@+id/editHoehe" />
+
+        <TextView
+            android:id="@+id/txtRaumNameHeader"
+            android:layout_width="157dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="16dp"
+            android:text="Raumname:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinBerechnungsart"
+            android:layout_width="284dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toEndOf="@+id/tvBerechnungHeader"
+            app:layout_constraintTop_toBottomOf="@+id/btnSpeichern" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="373dp"
+            android:layout_height="114dp"
+            android:layout_marginTop="20dp"
+            android:onClick="berechnen"
+            app:layout_constraintTop_toBottomOf="@+id/tvBerechnungHeader"
+            app:srcCompat="@drawable/decke"
+            tools:layout_editor_absoluteX="19dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

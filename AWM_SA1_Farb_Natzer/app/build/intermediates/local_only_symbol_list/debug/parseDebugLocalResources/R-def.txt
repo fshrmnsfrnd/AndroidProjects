@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable decke
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable wand
+id btnNeu
+id btnReset
+id btnSpeichern
+id constraintLayout
+id coordinatorL
+id editBreite
+id editHoehe
+id editLaenge
+id editRaumname
+id imageView
+id imgBtnNext
+id spinBerechnungsart
+id tvBerechnungHeader
+id txtBreiteHeader2
+id txtGesamtFlaeche
+id txtGesamtFlaecheHeader
+id txtHoeheHeader
+id txtLaengeHeader
+id txtRaumNameHeader
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.AWM_SA1_Farb_Natzer
+style Theme.AWM_SA1_Farb_Natzer
+xml backup_rules
+xml data_extraction_rules

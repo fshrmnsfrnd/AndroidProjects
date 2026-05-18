@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "de.ts.btin2.blogic.app-mergeDebugResources-3:/layout/activity_main.xml",
+        "source": "de.ts.btin2.blogic.app-main-6:/layout/activity_main.xml"
+    },
+    {
+        "merged": "de.ts.btin2.blogic.app-mergeDebugResources-3:/layout/detail_liste_ort.xml",
+        "source": "de.ts.btin2.blogic.app-main-6:/layout/detail_liste_ort.xml"
+    }
+]

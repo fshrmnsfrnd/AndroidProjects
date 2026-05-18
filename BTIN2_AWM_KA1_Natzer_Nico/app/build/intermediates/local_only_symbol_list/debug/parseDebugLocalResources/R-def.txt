@@ -1,0 +1,35 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ort
+id btnLoeschen
+id btnSpeichern
+id btnSuchen
+id btnVorwahlNeu
+id editOrt
+id editSuchbegriff
+id editVorwahl
+id imageView
+id main
+id recyclerView
+id tvDetailsTitel
+id tvOrt
+id tvOrtTitel
+id tvOrtTitelDetail
+id tvSucheTitel
+id tvVorwahl
+id tvVorwahlTitel
+id tvVorwahlTitelDetail
+id tvVorwahlenTitel
+layout activity_main
+layout detail_liste_ort
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.BTIN2_AWM_SA2_NN_VN
+style Theme.BTIN2_AWM_SA2_NN_VN
+xml backup_rules
+xml data_extraction_rules

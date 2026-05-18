@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">BTIN2_AWM_SA2_NN_VN</string>
+    <style name="Base.Theme.BTIN2_AWM_SA2_NN_VN" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.BTIN2_AWM_SA2_NN_VN" parent="Base.Theme.BTIN2_AWM_SA2_NN_VN"/>
+</resources>

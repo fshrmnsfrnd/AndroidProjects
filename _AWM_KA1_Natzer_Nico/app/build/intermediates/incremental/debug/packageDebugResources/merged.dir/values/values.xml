@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">AWM_KA1_Natzer_Nico</string>
+    <style name="Base.Theme.AWM_KA1_Natzer_Nico" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.AWM_KA1_Natzer_Nico" parent="Base.Theme.AWM_KA1_Natzer_Nico"/>
+</resources>

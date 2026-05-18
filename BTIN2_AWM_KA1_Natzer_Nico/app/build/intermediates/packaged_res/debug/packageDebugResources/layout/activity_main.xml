@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/tvSucheTitel"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="51dp"
+        android:text="Suche:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVorwahlNeu" />
+
+    <TextView
+        android:id="@+id/tvOrtTitel"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
+        android:text="Ort:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVorwahlTitel" />
+
+    <EditText
+        android:id="@+id/editVorwahl"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="14dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="089"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvVorwahlTitel"
+        app:layout_constraintStart_toEndOf="@+id/tvVorwahlTitel" />
+
+    <TextView
+        android:id="@+id/tvVorwahlTitel"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:text="Vorwahl:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVorwahlenTitel" />
+
+    <EditText
+        android:id="@+id/editOrt"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="München"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvOrtTitel"
+        app:layout_constraintStart_toEndOf="@+id/tvOrtTitel" />
+
+    <TextView
+        android:id="@+id/tvDetailsTitel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="128dp"
+        android:text="Suchergebnisse:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSpeichern" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="394dp"
+        android:layout_height="263dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailsTitel" />
+
+    <Button
+        android:id="@+id/btnSpeichern"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="speichern"
+        android:text="speichern"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnVorwahlNeu"
+        app:layout_constraintEnd_toStartOf="@+id/btnLoeschen"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnVorwahlNeu" />
+
+    <Button
+        android:id="@+id/btnVorwahlNeu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:onClick="neu"
+        android:text="Neu"
+        app:layout_constraintEnd_toStartOf="@+id/btnSpeichern"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editOrt" />
+
+    <Button
+        android:id="@+id/btnLoeschen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="loeschen"
+        android:text="Löschen"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnVorwahlNeu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSpeichern" />
+
+    <TextView
+        android:id="@+id/tvVorwahlenTitel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="17dp"
+        android:text="Vorwahlen"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnSuchen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:onClick="suchen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLoeschen"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <EditText
+        android:id="@+id/editSuchbegriff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="%"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvSucheTitel"
+        app:layout_constraintStart_toEndOf="@+id/tvSucheTitel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
